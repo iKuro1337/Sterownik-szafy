@@ -1,1 +1,7 @@
 Pliki Eagle
+
+Światło - plik z płytką bazową do której podpinane są wszystkie elementy
+Atmega32 - plik z płytką sterującą na bazie Atmega32. do niej podpinane jest zasilanie, programator. Płytka jest osadzana na płytce bazowej
+
+Do dodania
+Płytka na bazie ESP8266
