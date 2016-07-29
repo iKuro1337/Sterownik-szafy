@@ -46,4 +46,7 @@ Podłączenie:
   6) Światło wewnętrzne szafy, prawa strona, zapalająca się kiedy prawe drzwi są otwarte
   7) Światło wewnętrzne szafy, prawa strona, zapalająca się kiedy prawe drzwi są otwarte
   8) Światło wewnętrzne szafy, prawa strona, zapalająca się kiedy prawe drzwi są otwarte
-- Płytkę zasilającą ustawiamy na 5V, przylutowujemy do niej 4 kable (po poprawce) bądź 6 kabli (przed korektą) skręconą parę czerwony/czarny podpinamy od strony zasilania płytki. Dodatkowy przewód od strony +12V podłączany jest po prawej stronie płytki bazowej. Luźny przewód czerwony podłączamy po prawej stronie trójki pinów zasilających. Dodatkowy przewód czerwony ma być podpięty po lewej stronie płytki.
+- Płytkę zasilającą ustawiamy na 5V, przylutowujemy do niej 4 kable (po poprawce) bądź 6 kabli (przed korektą) skręconą parę czerwony/czarny podpinamy od strony zasilania płytki. 
+Dodatkowy przewód od strony +12V podłączany jest po prawej stronie płytki bazowej. 
+przewód czerwony podłączamy po prawej stronie trójki pinów zasilających. 
+przewód czerwony ma być podpięty po lewej stronie płytki.
