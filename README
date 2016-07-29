@@ -1,2 +1,47 @@
-# Sterownik-szafy
-Dokumentacja sterownika szafy razem ze wszystkimi aktualizacjami
+Sterownik oświetlenia w szafie oraz przejścia obok szafy
+
+BOM płytka bazowa:
+8x rezystor 10k
+8x rezystor 60
+8x IRLZ44N
+8x złącza ARK 2pin
+nx Listwy goldpin
+
+BOM płytka sterująca Atmega32:
+1x Atmega32
+2x Zworka
+1x Przycisk monostabilny
+1x złącze ARK 2pin
+4x kondensator 100n
+1x rezystor 10k
+1x rezystor pod diode (ok 200)
+nx listwy goldpin
+
+BOM obudowa:
+3x JACK stereo (2 mogą być MONO)
+1x wyświetlacz 4x20 z przetwornikiem i2c
+1x czujnik ruchu PIR 5V HC-SR501
+WIP czujnik oświetlenia.
+
+Błędy (v1)
+1) Odwrócone piny zasilające płytkę bazową 5V i 12V - jest 12V po lewej, 5V po prawej, ma być 5V po lewej, 12 po prawej (płytka Atmega32)
+2) Za duży odstęp między pinami 12V,5V i GND wyprowadzonymi na płytce bazowej (płytka bazowa)
+3) Za wąskie ścieżki zasilania - należy je pogrubić (wszystko)
+4) Pady z przycisku stykają się z ramką płytki (płytka Atmega32)
+5) Brak złącza na zasilanie/zasilacz poza obudową (obudowa)
+
+Podłączenie:
+- Wyświetlacz 4x20 podpiąć pod piny 22 i 23 Atmega 32 bezpośrednio. Zasilanie wziąć z wyprowadzeń
+- Zworkę podświetlenia wyświetlacza zastąpić przyciskiem kołyskowym bądź innym, spełniającym funkcję włączania/wyłączania podświetlenia.
+- Oświetlenie jest podłączane do kolejnych złącz ARK na dowolnej zasadzie.
+- Podłączenie czujnika ruchu PIR tylko i wyłącznie na pin 1 - wpinany na pojedyncze gniazdo JACK
+- Podłączenie czujników otwarcia/zamknięcia strony szafy podłączyć do pinów 2 i 3, drugą stronę złączyć z masą - wpinane na wybrane jedno z dwóch gniazd JACK
+- Poszczególne gniazda mają następujące funkcje (od prawej góry, dołu, do lewej strony dołu)
+  1) Światło zewnętrzne zapalające się zawsze jak jest ruch
+  2) Światło wewnętrzne szafy, góra, zapalająca się kiedy którekolwiek z drzwi jest otwarte
+  3) Światło wewnętrzne szafy, lewa strona, zapalająca się kiedy lewe drzwi są otwarte
+  4) Światło wewnętrzne szafy, lewa strona, zapalająca się kiedy lewe drzwi są otwarte
+  5) Światło wewnętrzne szafy, prawa strona, zapalająca się kiedy prawe drzwi są otwarte
+  6) Światło wewnętrzne szafy, prawa strona, zapalająca się kiedy prawe drzwi są otwarte
+  7) Światło wewnętrzne szafy, prawa strona, zapalająca się kiedy prawe drzwi są otwarte
+  8) Światło wewnętrzne szafy, prawa strona, zapalająca się kiedy prawe drzwi są otwarte
